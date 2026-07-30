@@ -16,3 +16,4 @@ Welcome to the documentation for the Bipedal Robot project.
    hardware
    firmware
    bill_of_materials
+   bipedal_walking_robots

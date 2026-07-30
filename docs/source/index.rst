@@ -13,6 +13,8 @@ Welcome to the documentation for the Bipedal Robot project.
    :caption: Contents:
 
    overview
+   dynamics
    hardware
    firmware
    bill_of_materials
+   bipedal_walking_robots
