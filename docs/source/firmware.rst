@@ -1,4 +1,28 @@
-Firmware
-========
+.. _firmware:
 
-A brief description of the Bipedal Robot firmware
+=========
+Firmware
+=========
+
+[Last edited by: Arfred Garcia (arfred (dot) garcia (at) outlook (dot) com, 30/07/2026)]
+
+The documentation explaining the structure of the current firmware can be found here.
+
+ODrive 
+-------
+
+Before reading this section, one assumes you have read the pre-requisite knowledge on how the hardware is structured as found in the :ref:`hardware section <hardware>`.
+
+ODrive is a family of motor controllers which were created by an Imperial alum (https://discourse.odriverobotics.com/t/introductions-new-to-the-forum/18/3) that enables those who want to use brushless DC motors in project at a low-cost and with a low barrier to entry.
+
+Specifically, these boards allow one to implement somewhat 'complex' control systems with ease, such that one can control the motor's respective 'position', 'velocity' and 'torque' using a technique known as Field Oriented Control (FOC).
+
+This control method involves selectively energising and de-energising the motor's stator coils to continuously push and pull the rotor, enabling precise control of position, velocity, or torque via a PWM (Pulse Width Modulation) controller. 
+
+The method employed by ODrive family of boards derives from open-source academic research, specifically the SimpleFOCproject (https://simplefoc.com), where the control plant image is shown below, taken from the official documentation of the ODrive family:
+
+.. figure:: /images/controller_with_ff.png
+   :alt: SimpleFOC control plant diagram
+   :width: 600px
+   :align: center
+

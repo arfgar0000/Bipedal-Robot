@@ -46,9 +46,14 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hardware.html">Hardware</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Firmware</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Firmware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#odrive">ODrive</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="bill_of_materials.html">Bill of Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bipedal_walking_robots.html">Bipedal Walking Robot Tables</a></li>
 </ul>
 
         </div>
@@ -76,8 +81,21 @@
            <div itemprop="articleBody">
              
   <section id="firmware">
-<h1>Firmware<a class="headerlink" href="#firmware" title="Link to this heading"></a></h1>
-<p>A brief description of the Bipedal Robot firmware</p>
+<span id="id1"></span><h1>Firmware<a class="headerlink" href="#firmware" title="Link to this heading"></a></h1>
+<p>[Last edited by: Arfred Garcia (arfred (dot) garcia (at) outlook (dot) com, 30/07/2026)]</p>
+<p>The documentation explaining the structure of the current firmware can be found here.</p>
+<section id="odrive">
+<h2>ODrive<a class="headerlink" href="#odrive" title="Link to this heading"></a></h2>
+<p>Before reading this section, one assumes you have read the pre-requisite knowledge on how the hardware is structured as found in the <a class="reference internal" href="hardware.html#hardware"><span class="std std-ref">hardware section</span></a>.</p>
+<p>ODrive is a family of motor controllers which were created by an Imperial alum (<a class="reference external" href="https://discourse.odriverobotics.com/t/introductions-new-to-the-forum/18/3">https://discourse.odriverobotics.com/t/introductions-new-to-the-forum/18/3</a>) that enables those who want to use brushless DC motors in project at a low-cost and with a low barrier to entry.</p>
+<p>Specifically, these boards allow one to implement somewhat ‘complex’ control systems with ease, such that one can control the motor’s respective ‘position’, ‘velocity’ and ‘torque using a technique known as Field Oriented Control (FOC).</p>
+<p>This control method involves selectively energising and de-energising the motor’s stator coils to continuously push and pull the rotor, enabling precise control of position, velocity, or torque via a PWM (Pulse Width Modulation) controller.</p>
+<p>The method employed by ODrive family of boards derives from open-source academic research, specifically the SimpleFOCproject (<a class="reference external" href="https://simplefoc.com">https://simplefoc.com</a>), where the control plant image is shown below, taken from the official documentation of the ODrive family:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/controller_with_ff.png"><img alt="SimpleFOC control plant diagram" src="_images/controller_with_ff.png" style="width: 600px;" />
+</a>
+</figure>
+</section>
 </section>
 
 
